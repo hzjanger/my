@@ -1,19 +1,27 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
-import {SearchComponent} from './layout/search/search.component';
-import {CompanyComponent} from './layout/company/company.component';
-import {SearchResultsComponent} from './layout/search-results/search-results.component';
+import {FrameComponent} from './layout/frame/frame.component';
 import {LoginComponent} from './layout/login/login.component';
-import {RegisterComponent} from './layout/register/register.component';
-import {MainPageComponent} from './layout/main-page/main-page.component';
 import {ErrorComponent} from './layout/error/error.component';
+import {RegisterComponent} from './layout/register/register.component';
+import {MainComponent} from './layout/frame/main/main.component';
+import {SearchResultsComponent} from './layout/frame/search-results/search-results.component';
+import {BaseInfosComponent} from './layout/frame/base-infos/base-infos.component';
+import {ResultComponent} from './layout/frame/result/result.component';
 
 
 const routes: Routes = [
-  {path: '',component: MainPageComponent,children:[
-      {path: '',component: SearchComponent},
-      {path: 'result',component: SearchResultsComponent},
-      {path: 'information',component: CompanyComponent}
+  // ,children:[
+  // {path: '',component: SearchComponent},
+  // {path: 'result',component: SearchResultsComponent},
+  // {path: 'information',component: BaseInfosComponent}
+// ]
+  {path: '',component: FrameComponent,children:[
+      {path: '',component: MainComponent},
+      {path: 'result',component: ResultComponent,children:[
+          {path: '', component: SearchResultsComponent},
+          {path: 'information', component: BaseInfosComponent}
+        ]}
     ]},
   {path: 'login',component: LoginComponent},
   {path: 'register',component: RegisterComponent},

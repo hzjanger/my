@@ -1,33 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { NavComponent } from './layout/nav/nav.component';
-import { BaseInfosComponent } from './layout/base-infos/base-infos.component';
-import { CompanyComponent } from './layout/company/company.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import { SearchComponent } from './layout/search/search.component';
 import {AppRoutingModule} from './app-routing.module';
-import { SearchResultsComponent } from './layout/search-results/search-results.component';
-import { LoginComponent } from './layout/login/login.component';
-import { RegisterComponent } from './layout/register/register.component';
-import { MainPageComponent } from './layout/main-page/main-page.component';
-import { ErrorComponent } from './layout/error/error.component';
+import {FooterComponent} from './layout/frame/footer/footer.component';
+import {LoginComponent} from './layout/login/login.component';
+import {RegisterComponent} from './layout/register/register.component';
+import {ErrorComponent} from './layout/error/error.component';
+import {FrameComponent} from './layout/frame/frame.component';
+import { MainComponent } from './layout/frame/main/main.component';
+import {NavComponent} from './layout/frame/nav/nav.component';
+import {SearchResultsComponent} from './layout/frame/search-results/search-results.component';
+import {BaseInfosComponent} from './layout/frame/base-infos/base-infos.component';
+import { ResultComponent } from './layout/frame/result/result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
-    BaseInfosComponent,
-    CompanyComponent,
+    ErrorComponent,
+    FrameComponent,
+    MainComponent,
     FooterComponent,
-    SearchComponent,
-    SearchResultsComponent,
     LoginComponent,
     RegisterComponent,
-    MainPageComponent,
-    ErrorComponent
+    NavComponent,
+    SearchResultsComponent,
+    BaseInfosComponent,
+    ResultComponent
+
+
+
 
   ],
   imports: [
