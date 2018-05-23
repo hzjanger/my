@@ -13,6 +13,8 @@ import {NavComponent} from './layout/frame/nav/nav.component';
 import {SearchResultsComponent} from './layout/frame/search-results/search-results.component';
 import {BaseInfosComponent} from './layout/frame/base-infos/base-infos.component';
 import { ResultComponent } from './layout/frame/result/result.component';
+import { EnterprisePictureComponent } from './layout/frame/enterprise-picture/enterprise-picture.component';
+import {NgxEchartsModule} from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { ResultComponent } from './layout/frame/result/result.component';
     NavComponent,
     SearchResultsComponent,
     BaseInfosComponent,
-    ResultComponent
+    ResultComponent,
+    EnterprisePictureComponent
 
 
 
@@ -36,6 +39,7 @@ import { ResultComponent } from './layout/frame/result/result.component';
     BrowserModule,
     NgbModule.forRoot(),
     AppRoutingModule,
+    NgxEchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

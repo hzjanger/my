@@ -8,6 +8,7 @@ import {MainComponent} from './layout/frame/main/main.component';
 import {SearchResultsComponent} from './layout/frame/search-results/search-results.component';
 import {BaseInfosComponent} from './layout/frame/base-infos/base-infos.component';
 import {ResultComponent} from './layout/frame/result/result.component';
+import {EnterprisePictureComponent} from './layout/frame/enterprise-picture/enterprise-picture.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
       {path: '',component: MainComponent},
       {path: 'result',component: ResultComponent,children:[
           {path: '', component: SearchResultsComponent},
-          {path: 'information', component: BaseInfosComponent}
+          {path: 'information', component: BaseInfosComponent},
+          {path: 'enterprise', component: EnterprisePictureComponent}
         ]}
     ]},
   {path: 'login',component: LoginComponent},
